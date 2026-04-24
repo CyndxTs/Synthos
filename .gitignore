@@ -1,0 +1,44 @@
+# =========================
+# Build / output files (except .hex)
+# =========================
+Debug/
+Release/
+build/
+*.o
+*.d
+*.elf
+*.map
+*.lss
+*.eep
+
+# =========================
+# Microchip Studio cache / user files
+# =========================
+*.atsuo
+*.user
+*.userprefs
+*.suo
+*.tmp
+
+# =========================
+# Visual Studio base files
+# =========================
+.vs/
+*.vcxproj.user
+
+# =========================
+# SimulIDE temporales
+# =========================
+*.bak
+*.autosave
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
