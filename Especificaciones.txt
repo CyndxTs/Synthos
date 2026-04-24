@@ -44,6 +44,6 @@ terminos de codigo, pero no creo que sea bueno desperdiciar tanta memoria..
 o que se vayan a usar '65536' posiciones xd]
 
 [#] CANCIONES EXTRA:
->> En la dirección "./Synthos/Synthos/" encontrarán la carpeta "MDX". Aquí están
+>> En la carpeta "MDX" están
 los códigos para el uso de cada canción, por lo que, simplemente, copien todo el
 archivo de la canción que gusten al main y listo.
