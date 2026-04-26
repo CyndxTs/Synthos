@@ -70,6 +70,7 @@ La altura de cada barra refleja la duración de la nota activa. La cuarta lleva 
 | Sesentaicuatroava | 0     |
 
 Si la misma nota se repite de forma consecutiva, el nivel del visualizador se mantiene, lo que permite representar duraciones compuestas como Cuarta + Dieciseisava sin perder la continuidad visual.
+
 ---
 ## ⚙️ Limitaciones
 | Parámetro                           | Límite                    |
