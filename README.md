@@ -4,7 +4,9 @@ Synthos es un escenario musical para el ATmega16. Carga una canción, la reprodu
 2. Presiona cualquiera de las teclas conectadas al pin A (`A`, `S`, `D`, `F`, `G`, `H`, `J`, `K`) para activar el sistema e iniciar la canción.
 3. La canción comienza a sonar y las notas se visualizan en tiempo real en el panel LED.
 4. Al terminar, el sistema queda en espera. Presiona nuevamente para repetir.
+
 ---
+
 ## 🗂️ Seccionamiento Musical
 En lugar de escribir cada nota de forma individual, las canciones se organizan en secciones reutilizables. Esto permite estructurar patrones repetidos sin duplicar código, reduciendo el tamaño del programa en aproximadamente un 70%.
 
@@ -35,7 +37,9 @@ Los 3 bits inferiores almacenan la duración de la nota, abarcando desde la semi
 | 100   | Dieciseisava      | ≈ 125 ms          |
 | 101   | Treintaidosava    | ≈ 62.5 ms         |
 | 110   | Sesentaicuatroava | ≈ 31.25 ms        |
+
 ---
+
 ## 🎵 Patrón Musical
 Luego del seccionamiento, el programa necesita saber de qué manera se tocarán las secciones. Para ello, se define como 'patrón' a una secuencia de entradas, donde cada una indica desde qué nota de una sección comenzar, y cuántas notas reproducir a partir de ahí.
 
@@ -47,6 +51,7 @@ Duraciones:  [  6 |  6 |  4 |  6 | ... ]   ← Cuántas notas reproducir
 ```
 
 ---
+
 ## 📊 Visualizador de Notas
 El visualizador representa la actividad musical en tiempo real mediante 8 barras verticales sobre la matriz LED. Cada barra corresponde a un grupo de notas del conjunto declarado, agrupadas en el orden en que fueron definidas, no por frecuencia ni altura.
 El tamaño de cada grupo se determina tomando el múltiplo de 8 inmediatamente superior al total de notas del proyecto y dividiendo ese valor entre 8.
@@ -72,6 +77,7 @@ La altura de cada barra refleja la duración de la nota activa. La cuarta lleva 
 Si la misma nota se repite de forma consecutiva, el nivel del visualizador se mantiene, lo que permite representar duraciones compuestas como Cuarta + Dieciseisava sin perder la continuidad visual.
 
 ---
+
 ## ⚙️ Limitaciones
 | Parámetro                           | Límite                    |
 |-------------------------------------|---------------------------|
@@ -79,9 +85,11 @@ Si la misma nota se repite de forma consecutiva, el nivel del visualizador se ma
 | Secciones del patrón                | 256                       |
 | Barras del visualizador             | 8                         |
 | Orden del visualizador              | Por declaración           |
+
 ---
+
 ## 🛠️ Recursos
-- 🖥️ **Microchip Studio** — IDE para escribir y compilar el código AVR Assembly. Se usa para generar el `.hex` que se carga en el simulador.
-- ⚡ **SimulIDE** — Simulador de circuitos electrónicos donde se monta y prueba el escenario. Se recomienda usar la versión **0.4.15**, incluida en el proyecto en formato `.zip`, ya que es la versión con soporte correcto para el ATmega16.
+- 🖥️ **Microchip Studio** `7.0` — IDE para escribir y compilar el código AVR Assembly. Se usa para generar el `.hex` que se carga en el simulador.
+- ⚡ **SimulIDE** `0.4.15` — Simulador de circuitos electrónicos donde se monta y prueba el escenario.
 - 📁 **`Canciones/`** — Directorio de canciones listas para copiar en formato `.txt`.
-- 📊 *`Compresor.xlsx`* — Hoja de cálculo para definir el conjunto de notas del proyecto. Incluye sus frecuencias, los valores OCR calculados para el timer y la codificación comprimida lista para usar en el programa.
+- 📊 *`Compresor.xlsx`* — Hoja de cálculo para definir y realizar la compresión de notas del proyecto.
